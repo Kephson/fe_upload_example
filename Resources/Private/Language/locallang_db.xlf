@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-07-19T14:53:30Z"
+		  product-name="fe_upload_example">
+		<header/>
+		<body>
+			<trans-unit id="tx_feuploadexample_domain_model_project">
+				<source>Project</source>
+			</trans-unit>
+			<trans-unit id="tx_feuploadexample_domain_model_project.fe_user_id">
+				<source>Fe user</source>
+			</trans-unit>
+			<trans-unit id="tx_feuploadexample_domain_model_project.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_feuploadexample_domain_model_project.files">
+				<source>Files</source>
+			</trans-unit>
+
+			<trans-unit id="fe_upload_example.name">
+				<source>Frontend upload example</source>
+			</trans-unit>
+			<trans-unit id="fe_upload_example.description">
+				<source>Frontend upload example with multiple files</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

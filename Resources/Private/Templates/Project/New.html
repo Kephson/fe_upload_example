@@ -1,0 +1,29 @@
+<f:layout name="Default" />
+
+Form for creating a new project
+
+<f:section name="main">
+	<h2 class="t3">{f:translate(key:'newProject')}</h2>
+
+	<p><f:translate key="mandatory_text" /></p>
+
+	<f:flashMessages />
+
+	<f:render partial="FormErrors" arguments="{object:Project}" />
+
+	<div class="default-form-wrap">
+		<f:form action="create" enctype="multipart/form-data"  name="project" object="{project}" id="projectForm">
+			<fieldset class="powermail_fieldset">
+				<legend class="powermail_legend">{f:translate(key:'projectDetails')}</legend>
+				<f:render partial="Project/FormFields" arguments="{_all}" />
+				<div class="row">
+					<div class="powermail_fieldwrap powermail_fieldwrap_type_submit powermail_fieldwrap_submit col-sm-12 form-group">
+						<div class="col-md-11 col-xl-9 px-0 col-sm-offset-2">
+							<f:form.submit value="{f:translate(key:'createProject')}" class="btn btn-primary" />
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</f:form>
+	</div>
+</f:section>

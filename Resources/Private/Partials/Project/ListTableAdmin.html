@@ -1,0 +1,22 @@
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th scope="col" class="first col-1"><f:translate key="project.name" /></th>
+			<th scope="col" class="col-2"><f:translate key="project.crdate" /></th>
+			<th scope="col" class="col-3"><f:translate key="project.feuserinfo" /></th>
+			<th scope="col" class="col-4"> </th>
+			<th scope="col" class="last col-5"> </th>
+		</tr>
+	</thead>
+	<tbody>
+		<f:for each="{projects}" as="project" iteration="p">
+			<tr{f:if(condition:'{p.isLast}',then:' class="isLast"')}>
+				<td class="first col-1"><f:link.action action="show" arguments="{project : project}" class="">{project.name}</f:link.action></td>
+				<td class="col-2"><f:link.action action="show" arguments="{project : project}" class=""><f:format.date date="{project.crdate}" format="d.m.Y" /></f:link.action></td>
+				<td class="col-3"><f:link.action action="show" arguments="{project : project}" class="">{project.feUserId.company} ({project.feUserId.username})</f:link.action></td>
+				<td class="col-4"><f:link.action action="edit" arguments="{project : project}" class="btn btm-primary"><f:translate key="edit" /></f:link.action></td>
+				<td class="last col-5"><f:link.action action="delete" arguments="{project : project}" class="btn btm-primary"><f:translate key="delete" /></f:link.action></td>
+			</tr>
+		</f:for>
+	</tbody>
+</table>

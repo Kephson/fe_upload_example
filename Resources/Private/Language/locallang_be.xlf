@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-07-19T14:53:30Z"
+		  product-name="fe_upload_example">
+		<header/>
+		<body>
+			<trans-unit id="chead1">
+				<source>Configuration</source>
+			</trans-unit>
+			<trans-unit id="cselect">
+				<source>Select view</source>
+			</trans-unit>
+			<trans-unit id="celem0">
+				<source>Project module</source>
+			</trans-unit>
+			<trans-unit id="celem1">
+				<source>Question module</source>
+			</trans-unit>
+			<trans-unit id="celem2">
+				<source>Shared project module</source>
+			</trans-unit>
+			<trans-unit id="adminusergroup">
+				<source>Usergroup of administrators</source>
+			</trans-unit>
+			<trans-unit id="filestorage">
+				<source>File storage folder for uploads</source>
+			</trans-unit>
+			<trans-unit id="allowedfiletypes">
+				<source>Allowed file types (comma separated)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

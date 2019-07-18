@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-07-19T14:53:30Z"
+		  product-name="fe_upload_example">
+		<header/>
+		<body>
+			<trans-unit id="chead1" approved="yes">
+				<source>Configuration</source>
+				<target state="translated">Konfiguration</target>
+			</trans-unit>
+			<trans-unit id="cselect" approved="yes">
+				<source>Select view</source>
+				<target state="translated">Ausgabe wählen</target>
+			</trans-unit>
+			<trans-unit id="celem0" approved="yes">
+				<source>Project module</source>
+				<target state="translated">Projektmodul</target>
+			</trans-unit>
+			<trans-unit id="celem1" approved="yes">
+				<source>Question module</source>
+				<target state="translated">Fragenmodul</target>
+			</trans-unit>
+			<trans-unit id="celem2" approved="yes">
+				<source>Shared project module</source>
+				<target state="translated">Geteilte Projekte</target>
+			</trans-unit>
+			<trans-unit id="adminusergroup">
+				<source>Usergroup of administrators</source>
+				<target state="translated">Benutzergruppe für Admins</target>
+			</trans-unit>
+			<trans-unit id="filestorage">
+				<source>File storage folder for uploads</source>
+				<target state="translated">Dateiordner für Uploads</target>
+			</trans-unit>
+			<trans-unit id="allowedfiletypes">
+				<source>Allowed file types (comma separated)</source>
+				<target state="translated">Erlaubte Dateitypen (komma separiert)</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

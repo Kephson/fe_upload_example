@@ -1,0 +1,22 @@
+{namespace mu=Fab\MediaUpload\ViewHelpers}
+<div class="row">
+	<div class="powermail_fieldwrap powermail_fieldwrap_input col-sm-12">
+		<label for="name" class="control-label col-sm-12">
+			<f:translate key="project.name" /> <span class="mandatory">*</span>
+		</label>
+		<div class="col-md-11 col-xl-9 px-0">
+			<f:form.textfield property="name" id="name" class="powermail_input form-control field_required" maxlength="255" />
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="powermail_fieldwrap powermail_fieldwrap_input col-sm-12">
+		<label class="control-label col-sm-12">
+			<f:translate key="project.files" />
+		</label>
+		<div class="col-md-11 col-xl-9 px-0">
+			<mu:widget.upload allowedExtensions="{settings.allowedfiletypes}" storage="{settings.filestorage}" property="projectfiles" sizeUnit="Mo" />
+			<p class="uploadInfo"><f:translate key="uploadInfo" /></p>
+		</div>
+	</div>
+</div>

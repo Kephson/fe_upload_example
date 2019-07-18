@@ -1,0 +1,41 @@
+{namespace r=EHAERER\FeUploadExample\ViewHelpers}
+<f:layout name="Default" />
+
+List view for admin and user projects
+
+<f:section name="main">
+
+<f:flashMessages />
+
+	<h2 class="t3"><f:translate key="myProjects" /></h2>
+
+	<div class="row tableLine">
+		<div class="col-12">
+			<f:if condition="{projects -> f:count()}>5">
+				<f:render partial="Project/Search" arguments="{_all}" />
+			</f:if>
+			<f:if condition="{projects}">
+				<f:then>
+					<f:if condition="{isUserAdmin}">
+						<f:then>
+							<f:render partial="Project/ListTableAdmin" arguments="{_all}" />
+						</f:then>
+						<f:else>
+							<f:render partial="Project/ListTable" arguments="{_all}" />
+						</f:else>
+					</f:if>
+				</f:then>
+				<f:else>
+					<p><f:translate key="noProject" /></p>
+				</f:else>
+			</f:if>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-4">
+			<f:link.action action="new" class="btn btn-primary"><f:translate key="newProject" /></f:link.action>
+		</div>
+	</div>
+
+</f:section>

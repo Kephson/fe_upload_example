@@ -1,0 +1,33 @@
+{namespace r=EHAERER\FeUploadExample\ViewHelpers}
+<f:layout name="Default" />
+
+Delete view for project
+
+<f:section name="main">
+	<h2 class="t3">{f:translate(key:'deleteProject',arguments:'{0:\'{project.name}\'}')}</h2>
+
+	<f:flashMessages />
+
+	<f:render partial="FormErrors" arguments="{object:Project}" />
+
+	<div class="default-form-wrap">
+		<f:form action="delete" enctype="multipart/form-data" name="project" object="{project}">
+
+			<f:form.hidden name="reallydelete" value="1" />
+
+			<p><f:translate key="deleteProjectText" arguments="{0:'{project.name}'}" /></p>
+
+			<div class="row">
+				<div class="powermail_fieldwrap powermail_fieldwrap_type_submit powermail_fieldwrap_submit col-sm-12 form-group">
+					<div class="col-md-11 col-xl-9 px-0 col-sm-offset-2">
+						<f:link.action action="list" class="btn btn-primary"><f:translate key="cancel" /></f:link.action>
+					</div>
+					<div class="col-md-11 col-xl-9 px-0 col-sm-offset-2">
+						<f:form.submit class="btn btn-primary" value="{f:translate(key:'delete')}" />
+					</div>
+				</div>
+			</div>
+		</f:form>
+	</div>
+
+</f:section>

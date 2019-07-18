@@ -1,0 +1,32 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<div class="table-responsive">
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<th scope="row" class="cell-1">
+					<strong><f:translate key="project.name" /></strong>
+				</th>
+				<td class="cell-2">{project.name}</td>
+			</tr>
+			<f:if condition="{files}">
+			<tr class="isLast">
+				<th scope="row" class="cell-1">
+					<strong><f:translate key="project.files" /></strong>
+				</th>
+				<td class="cell-2">
+					<ul>
+						<f:for each="{files.documents}" as="document">
+							<li><a href="{document.publicUrl}" target="_blank">{document.name}</a></li>
+						</f:for>
+						<f:for each="{files.images}" as="image" iteration="i">
+							<li><a href="{image.publicUrl}" target="_blank">{image.name}</a></li>
+						</f:for>
+					</ul>
+				</td>
+			</tr>
+			</f:if>
+		</tbody>
+	</table>
+</div>
+

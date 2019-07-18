@@ -1,0 +1,47 @@
+plugin.tx_feuploadexample_feupex {
+	view {
+		templateRootPaths {
+			0 = EXT:fe_upload_example/Resources/Private/Templates/
+			1 = {$plugin.tx_feuploadexample_feupex.view.templateRootPath}
+		}
+
+		partialRootPaths {
+			0 = EXT:fe_upload_example/Resources/Private/Partials/
+			1 = {$plugin.tx_feuploadexample_feupex.view.partialRootPath}
+		}
+
+		layoutRootPaths {
+			0 = EXT:fe_upload_example/Resources/Private/Layouts/
+			1 = {$plugin.tx_feuploadexample_feupex.view.layoutRootPath}
+		}
+	}
+
+	persistence {
+		storagePid = {$plugin.tx_feuploadexample_feupex.persistence.storagePid}
+	}
+}
+
+# ext hairu config
+plugin.tx_hairu {
+	features {
+		skipDefaultArguments = 1
+	}
+
+	legacy {
+		enableLegacyFlashMessageHandling = 0
+	}
+
+	view {
+		templateRootPaths.100 = EXT:fe_upload_example/Resources/Private/Templates/Hairu/
+		partialRootPaths.100 = EXT:fe_upload_example/Resources/Private/Partials/Hairu/
+		layoutRootPaths.100 = EXT:fe_upload_example/Resources/Private/Layouts/Hairu/
+	}
+
+}
+
+# ext media_upload config
+plugin.tx_mediaupload {
+	settings {
+		allowedFrontendGroups = 1,2
+	}
+}

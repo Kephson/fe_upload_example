@@ -1,0 +1,26 @@
+{namespace h=PAGEmachine\Hairu\ViewHelpers}
+
+<f:layout name="Default"/>
+<f:section name="main">
+
+<f:flashMessages />
+
+<h:logoutForm
+  pageUid="{settings.login.page}"
+  method="post"
+  class="logout form-inline">
+
+  <f:render partial="Form/Static" arguments="{
+    translationKey: 'login.status',
+    defaultLabel: 'Currently logged in as:',
+    text: user.username
+  }"/>
+
+  <f:render partial="Form/SubmitButton" arguments="{
+    translationKey: 'action.logout',
+    defaultLabel: 'Log out'
+  }"/>
+
+</h:logoutForm>
+
+</f:section>

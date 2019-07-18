@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2019-07-19T14:53:30Z"
+		  product-name="fe_upload_example">
+		<header/>
+		<body>
+			<trans-unit id="project.feUserId" approved="yes">
+				<source>Frontend user</source>
+				<target state="translated">Frontend Benutzer</target>
+			</trans-unit>
+			<trans-unit id="project.name" approved="yes">
+				<source>Name</source>
+				<target state="translated">Name</target>
+			</trans-unit>
+			<trans-unit id="project.files" approved="yes">
+				<source>Files</source>
+				<target state="translated">Dateien</target>
+			</trans-unit>
+			<trans-unit id="project.files.existing">
+				<source>Existing files</source>
+				<target state="translated">Vorhandene Dateien</target>
+			</trans-unit>
+			<trans-unit id="project.crdate">
+				<source>Creation date</source>
+				<target state="translated">Erstellungsdatum</target>
+			</trans-unit>
+			<trans-unit id="project.feuserinfo">
+				<source>User</source>
+				<target state="translated">Benutzer</target>
+			</trans-unit>
+
+			<trans-unit id="tx_feuploadexample_domain_model_project" approved="yes">
+				<source>Project</source>
+				<target state="translated">Projekt</target>
+			</trans-unit>
+			<trans-unit id="newProject" approved="yes">
+				<source>Add new project</source>
+				<target state="translated">Neues Projekt erstellen</target>
+			</trans-unit>
+			<trans-unit id="updateProject" approved="yes">
+				<source>Update project</source>
+				<target state="translated">Projekt aktualisieren</target>
+			</trans-unit>
+			<trans-unit id="projectDetails" approved="yes">
+				<source>Project details</source>
+				<target state="translated">Projektdetails</target>
+			</trans-unit>
+			<trans-unit id="singleViewProject" approved="yes">
+				<source>Details for project "%s"</source>
+				<target state="translated">Details zum Projekt "%s"</target>
+			</trans-unit>
+			<trans-unit id="newProject" approved="yes">
+				<source>Create new Project</source>
+				<target state="translated">Neues Projekt anlegen</target>
+			</trans-unit>
+			<trans-unit id="myProjects" approved="yes">
+				<source>Overview of my projects</source>
+				<target state="translated">Übersicht meiner Projekte</target>
+			</trans-unit>
+			<trans-unit id="allProjects" approved="yes">
+				<source>Overview of all projects</source>
+				<target state="translated">Übersicht aller Projekte</target>
+			</trans-unit>
+			<trans-unit id="mes_newProject" approved="yes">
+				<source>The new project was added.</source>
+				<target state="translated">Das neue Projekt wurde gespeichert.</target>
+			</trans-unit>
+			<trans-unit id="mes_projectUpdated" approved="yes">
+				<source>The project was updated.</source>
+				<target state="translated">Das Projekt wurde aktualisiert.</target>
+			</trans-unit>
+			<trans-unit id="mes_projectDeleted" approved="yes">
+				<source>The project was deleted.</source>
+				<target state="translated">Das Projekt wurde gelöscht.</target>
+			</trans-unit>
+			<trans-unit id="noProject" approved="yes">
+				<source>There are no projects at the moment.</source>
+				<target state="translated">Derzeit sind noch keine Projekte vorhanden.</target>
+			</trans-unit>
+			<trans-unit id="deleteProjectText" approved="yes">
+				<source>Do you really want to delete the project "%s"?</source>
+				<target state="translated">Soll das Projekt "%s" wirklich gelöscht werden?</target>
+			</trans-unit>
+			<trans-unit id="deleteProject" approved="yes">
+				<source>Delete project "%s"</source>
+				<target state="translated">Projekt "%s" löschen</target>
+			</trans-unit>
+			<trans-unit id="createProject" approved="yes">
+				<source>Create project</source>
+				<target state="translated">Projekt anlegen</target>
+			</trans-unit>
+			<trans-unit id="saveProject" approved="yes">
+				<source>Save project</source>
+				<target state="translated">Projekt speichern</target>
+			</trans-unit>
+
+			<trans-unit id="backToList" approved="yes">
+				<source>Back to list</source>
+				<target state="translated">Zurück zur Liste</target>
+			</trans-unit>
+			<trans-unit id="edit" approved="yes">
+				<source>Edit</source>
+				<target state="translated">Editieren</target>
+			</trans-unit>
+			<trans-unit id="delete" approved="yes">
+				<source>Delete</source>
+				<target state="translated">Löschen</target>
+			</trans-unit>
+			<trans-unit id="show" approved="yes">
+				<source>Show</source>
+				<target state="translated">Anzeigen</target>
+			</trans-unit>
+			<trans-unit id="cancel" approved="yes">
+				<source>Cancel</source>
+				<target state="translated">Abbrechen</target>
+			</trans-unit>
+			<trans-unit id="uploadInfo" approved="yes">
+				<source>(select files by click on the button or drag and drop the files over the upload button)</source>
+				<target state="translated">(wählen Sie die Dateien über die Hochladen-Schaltfläche aus oder ziehen Sie
+					die Dateien direkt auf die Hochladen-Schaltfläche)
+				</target>
+			</trans-unit>
+
+			<trans-unit id="error_message_01" approved="yes">
+				<source>Could not send the form because there are some fields not filled out correctly. See errors
+					below.
+				</source>
+				<target state="translated">Beim Senden des Formular sind Fehler aufgetreten. Bitte prüfen Sie die
+					untenstehenden Fehler und korrigieren Sie die Eingabe.
+				</target>
+			</trans-unit>
+			<trans-unit id="error.1332933658" approved="yes">
+				<source>"%s" is not a number. Please only add a number here.</source>
+				<target state="translated">"%s" ist keine Zahl. Bitte hier nur Zahlen angeben.</target>
+			</trans-unit>
+			<trans-unit id="error.1221560718" approved="yes">
+				<source>The field is empty. Please fill out the field.</source>
+				<target state="translated">Das Feld ist leer. Bitte dieses Feld ausfüllen.</target>
+			</trans-unit>
+			<trans-unit id="error.1221560910" approved="yes">
+				<source>The field is empty. Please fill out the field.</source>
+				<target state="translated">Das Feld ist leer. Bitte dieses Feld ausfüllen.</target>
+			</trans-unit>
+
+			<trans-unit id="mandatory_text" approved="yes">
+				<source>* Please fill out these fields</source>
+				<target>* Bitte füllen Sie diese Felder aus</target>
+			</trans-unit>
+
+			<trans-unit id="searchField">
+				<source>Please type your search</source>
+				<target>Bitte Suchwort eingeben</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

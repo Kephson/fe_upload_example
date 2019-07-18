@@ -1,0 +1,28 @@
+config.tx_extbase {
+	persistence {
+		# Enable this if you need the reference index to be updated
+		updateReferenceIndex = 1
+		classes {
+			EHAERER\FeUploadExample\File\FileReference {
+				mapping {
+					tableName = sys_file_reference
+					columns {
+						uid_local.mapOnProperty = originalFileIdentifier
+					}
+				}
+			}
+
+			EHAERER\FeUploadExample\Domain\Model\Project {
+				mapping {
+					columns {
+						crdate.mapOnProperty = crdate
+					}
+				}
+			}
+		}
+	}
+
+	objects {
+		TYPO3\CMS\Extbase\Domain\Model\FileReference.className = EHAERER\FeUploadExample\File\FileReference
+	}
+}

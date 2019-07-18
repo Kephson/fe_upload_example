@@ -1,0 +1,25 @@
+{
+  "name": "ehaerer/fe-upload-example",
+  "type": "typo3-cms-extension",
+  "version": "1.0.0",
+  "description": "An example extension to show upload of files in TYPO3 frontend.",
+  "homepage": "https://www.ephra.im",
+  "license": "GPL-2.0+",
+  "keywords": [
+    "TYPO3 CMS",
+    "upload",
+    "frontend",
+    "example"
+  ],
+  "require": {
+    "typo3/cms-core": "^9.5.0",
+    "fab/media-upload": "^1.1",
+    "fluidtypo3/vhs": "^5.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "EHAERER\\FeUploadExample\\": "Classes"
+    }
+  }
+}
+

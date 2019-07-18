@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-07-19T14:53:30Z"
+		  product-name="fe_upload_example">
+		<header/>
+		<body>
+			<trans-unit id="fe_user_id.description">
+				<source>Fe user</source>
+			</trans-unit>
+			<trans-unit id="name.description">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="files.description">
+				<source>Files</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

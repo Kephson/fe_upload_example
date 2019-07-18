@@ -1,0 +1,53 @@
+<f:layout name="Default" />
+
+Edit form for projects
+
+<f:section name="main">
+	<h2 class="t3">{f:translate(key:'updateProject')} "{project.name}"</h2>
+
+	<p><f:translate key="mandatory_text" /></p>
+
+	<f:flashMessages />
+
+	<f:render partial="FormErrors" arguments="{object:Project}" />
+
+	<div class="default-form-wrap">
+		<f:form action="update" name="project" object="{project}" id="projectForm">
+			<fieldset class="powermail_fieldset">
+				<legend class="powermail_legend">{f:translate(key:'projectDetails')}</legend>
+				<f:render partial="Project/FormFields" arguments="{_all}" />
+
+				<f:if condition="{files}">
+					<div class="row">
+						<div class="powermail_fieldwrap powermail_fieldwrap_input col-sm-12">
+							<div class="label">
+								<label>
+									<f:translate key="project.files.existing" />
+								</label>
+							</div>
+							<div class="field">
+								<ul>
+									<f:for each="{files.documents}" as="document">
+										<li><a href="{document.publicUrl}" target="_blank">{document.name}</a></li>
+									</f:for>
+									<f:for each="{files.images}" as="image" iteration="i">
+										<li><a href="{image.publicUrl}" target="_blank">{image.name}</a></li>
+									</f:for>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</f:if>
+
+				<div class="row">
+					<div class="powermail_fieldwrap powermail_fieldwrap_type_submit powermail_fieldwrap_submit col-sm-12 form-group">
+						<div class="col-md-11 col-xl-9 px-0 col-sm-offset-2">
+							<f:form.submit value="{f:translate(key:'saveProject')}" class="btn btn-primary" />
+						</div>
+					</div>
+				</div>
+			</fieldset>
+		</f:form>
+	</div>
+
+</f:section>
