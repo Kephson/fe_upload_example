@@ -21,14 +21,6 @@
 										<numIndex index="0">LLL:EXT:fe_upload_example/Resources/Private/Language/locallang_be.xlf:celem0</numIndex>
 										<numIndex index="1">Project->list;Project->show;Project->new;Project->create;Project->edit;Project->update;Project->delete</numIndex>
 									</numIndex>
-									<numIndex index="1">
-										<numIndex index="0">LLL:EXT:fe_upload_example/Resources/Private/Language/locallang_be.xlf:celem1</numIndex>
-										<numIndex index="1">Question->list;Question->show;Question->new;Question->create;Question->edit;Question->update;Question->delete</numIndex>
-									</numIndex>
-									<numIndex index="2">
-										<numIndex index="0">LLL:EXT:fe_upload_example/Resources/Private/Language/locallang_be.xlf:celem2</numIndex>
-										<numIndex index="1">Project->listShared;Project->show;Project->new;Project->create;Project->edit;Project->update;Project->delete</numIndex>
-									</numIndex>
 								</items>
 							</config>
 						</TCEforms>
