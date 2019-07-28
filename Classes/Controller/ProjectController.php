@@ -296,7 +296,7 @@ class ProjectController extends AbstractController
      * @return void
      * @throws
      */
-    public function updateAction(\EHAERER\FeUploadExample\Model\Project $project)
+    public function updateAction(\EHAERER\FeUploadExample\Domain\Model\Project $project)
     {
         $projectUser = $project->getFeUserId();
         $projectVisibleToAll = $project->getVisibleAll();
@@ -389,7 +389,7 @@ class ProjectController extends AbstractController
 
             //\TYPO3\CMS\Extbase\Utility\DebuggerUtility::var_dump($file);
             // Create File Reference
-            // @var \TYPO3\CMS\Extbase\Domain\Model\FileReference;
+            /* @var $newFileReference \EHAERER\FeUploadExample\File\FileReference */
             $newFileReference = $this->objectManager->get(\EHAERER\FeUploadExample\File\FileReference::class);
             $newFileReference->setFile($file);
             $fileReferences->attach($newFileReference);
