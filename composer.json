@@ -1,6 +1,5 @@
 {
   "name": "ehaerer/fe-upload-example",
-  "version": "1.0.0",
   "repositories": [
     {
       "type": "composer",
