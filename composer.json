@@ -1,7 +1,16 @@
 {
   "name": "ehaerer/fe-upload-example",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://composer.typo3.org/"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/fabarea/media_upload"
+    }
+  ],
   "type": "typo3-cms-extension",
-  "version": "1.0.0",
   "description": "An example extension to show upload of files in TYPO3 frontend.",
   "homepage": "https://www.ephra.im",
   "license": "GPL-2.0+",
@@ -13,8 +22,7 @@
   ],
   "require": {
     "typo3/cms-core": "^9.5.0",
-    "fab/media-upload": "^1.1",
-    "fluidtypo3/vhs": "^5.1"
+    "fab/media-upload": "^1.1"
   },
   "autoload": {
     "psr-4": {
