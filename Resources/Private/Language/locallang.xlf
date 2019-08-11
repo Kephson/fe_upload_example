@@ -92,9 +92,7 @@
 			</trans-unit>
 
 			<trans-unit id="error_message_01">
-				<source>Could not send the form because there are some fields not filled out correctly. See errors
-					below.
-				</source>
+				<source>Could not send the form because there are some fields not filled out correctly. See errors below.</source>
 			</trans-unit>
 			<trans-unit id="error.1332933658">
 				<source>"%s" is not a number. Please only add a number here.</source>
@@ -110,10 +108,12 @@
 				<source>* Please fill out these fields</source>
 			</trans-unit>
 
-			<trans-unit id="searchField">
-				<source>Please type your search</source>
+			<trans-unit id="documents">
+				<source>Documents</source>
 			</trans-unit>
-
+			<trans-unit id="images">
+				<source>Images</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

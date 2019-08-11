@@ -7,6 +7,7 @@ CREATE TABLE tx_feuploadexample_domain_model_project (
 	name varchar(255) DEFAULT '' NOT NULL,
 	fe_user_id int(11) unsigned NOT NULL default '0',
 	files int(11) unsigned NOT NULL default '0',
+		files int(11) unsigned NOT NULL default '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,

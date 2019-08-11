@@ -116,18 +116,12 @@
 			</trans-unit>
 			<trans-unit id="uploadInfo" approved="yes">
 				<source>(select files by click on the button or drag and drop the files over the upload button)</source>
-				<target state="translated">(wählen Sie die Dateien über die Hochladen-Schaltfläche aus oder ziehen Sie
-					die Dateien direkt auf die Hochladen-Schaltfläche)
-				</target>
+				<target state="translated">(wählen Sie die Dateien über die Hochladen-Schaltfläche aus oder ziehen Sie die Dateien direkt auf die Hochladen-Schaltfläche)</target>
 			</trans-unit>
 
 			<trans-unit id="error_message_01" approved="yes">
-				<source>Could not send the form because there are some fields not filled out correctly. See errors
-					below.
-				</source>
-				<target state="translated">Beim Senden des Formular sind Fehler aufgetreten. Bitte prüfen Sie die
-					untenstehenden Fehler und korrigieren Sie die Eingabe.
-				</target>
+				<source>Could not send the form because there are some fields not filled out correctly. See errors below.</source>
+				<target state="translated">Beim Senden des Formular sind Fehler aufgetreten. Bitte prüfen Sie die untenstehenden Fehler und korrigieren Sie die Eingabe.</target>
 			</trans-unit>
 			<trans-unit id="error.1332933658" approved="yes">
 				<source>"%s" is not a number. Please only add a number here.</source>
@@ -147,11 +141,14 @@
 				<target>* Bitte füllen Sie diese Felder aus</target>
 			</trans-unit>
 
-			<trans-unit id="searchField">
-				<source>Please type your search</source>
-				<target>Bitte Suchwort eingeben</target>
+			<trans-unit id="documents" approved="yes">
+				<source>Documents</source>
+				<target>Dokumente</target>
 			</trans-unit>
-
+			<trans-unit id="images" approved="yes">
+				<source>Images</source>
+				<target>Bilder</target>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

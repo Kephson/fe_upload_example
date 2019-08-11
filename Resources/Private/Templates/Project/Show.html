@@ -3,7 +3,7 @@
 Single view for a project
 
 <f:section name="main">
-	<h2 class="t3"><f:translate key="singleViewProject" arguments="{0:'{project.name}'}" /></h2>
+	<h3 class="t3"><f:translate key="singleViewProject" arguments="{0:'{project.name}'}" /></h3>
 
 	<f:flashMessages />
 
@@ -11,14 +11,14 @@ Single view for a project
 
 	<div class="row">
 		<div class="col-6 col-md-4">
-			<f:link.action action="list" class="btn btn-primary"><f:translate key="backToList" /></f:link.action>
+			<f:link.action action="list" class="btn btn-secondary"><f:translate key="backToList" /></f:link.action>
 		</div>
 		<div class="col-6 col-md-4">
 			<f:link.action action="new" class="btn btn-primary"><f:translate key="newProject" /></f:link.action>
 		</div>
 		<f:if condition="{0:'{project.feUserId.uid}'}=={0:'{feUser.uid}'}">
 			<div class="col-6 col-md-4">
-				<f:link.action action="edit" arguments="{project : project}" class="btn btn-primary"><f:translate key="edit" /></f:link.action>
+				<f:link.action action="edit" arguments="{project : project}" class="btn btn-info"><f:translate key="edit" /></f:link.action>
 			</div>
 		</f:if>
 		<f:if condition="{isUserAdmin}">

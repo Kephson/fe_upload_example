@@ -40,8 +40,14 @@ plugin.tx_hairu {
 }
 
 # ext media_upload config
+# only these usergroups are allowed to upload files
 plugin.tx_mediaupload {
 	settings {
 		allowedFrontendGroups = 1,2
 	}
 }
+
+[request.getQueryParams()['tx_feuploadexample_feupex']['action'] == "new"] || [request.getQueryParams()['tx_feuploadexample_feupex']['action'] == "edit"]
+	page.includeJSFooter.mediaupload = EXT:media_upload/Resources/Public/Build/media_upload.min.js
+	page.includeCSS.mediaupload = EXT:media_upload/Resources/Public/Build/media_upload.min.css
+[global]

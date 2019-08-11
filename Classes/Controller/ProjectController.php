@@ -80,7 +80,7 @@ class ProjectController extends AbstractController
         }
         $files = $this->getMultipleFileData($projects);
         //DebuggerUtility::var_dump($files);
-        $this->view->assignMultiple(array(
+        $this->view->assignMultiple([
             'projects' => $projects,
             'feUser' => $this->feUser,
             'settings' => $this->settings,
@@ -88,7 +88,7 @@ class ProjectController extends AbstractController
             'files' => $files,
             'isUserAdmin' => $isUserAdmin,
             'searchValue' => $searchValue,
-        ));
+        ]);
     }
 
     /**
@@ -108,7 +108,7 @@ class ProjectController extends AbstractController
         }
         $files = $this->getMultipleFileData($projects);
         //DebuggerUtility::var_dump($files);
-        $this->view->assignMultiple(array(
+        $this->view->assignMultiple([
             'projects' => $projects,
             'feUser' => $this->feUser,
             'settings' => $this->settings,
@@ -116,7 +116,7 @@ class ProjectController extends AbstractController
             'files' => $files,
             'isUserAdmin' => $isUserAdmin,
             'searchValue' => $searchValue,
-        ));
+        ]);
     }
 
     /**
@@ -136,14 +136,14 @@ class ProjectController extends AbstractController
                 //DebuggerUtility::var_dump(count(get_object_vars($fileReferences)));
                 $files = $this->getFileData($fileReferences);
 
-                $this->view->assignMultiple(array(
+                $this->view->assignMultiple([
                     'project' => $showProject,
                     'feUser' => $this->feUser,
                     'settings' => $this->settings,
                     'config' => $this->config,
                     'files' => $files,
                     'isUserAdmin' => $this->isUserAdmin(),
-                ));
+                ]);
             }
         }
     }
@@ -156,7 +156,7 @@ class ProjectController extends AbstractController
      */
     protected function getMultipleFileData($projects)
     {
-        $files = array();
+        $files = [];
         foreach ($projects as $project) {
             $projectUid = $project->getUid();
             $fileReferences = $project->getFiles();
@@ -173,24 +173,24 @@ class ProjectController extends AbstractController
      */
     protected function getFileData($fileReferences)
     {
-        $files = array(
-            'images' => array(),
-            'documents' => array(),
-        );
-        //DebuggerUtility::var_dump($fileReferences);
+        $files = [
+            'images' => [],
+            'documents' => [],
+        ];
 
         if (!is_null($fileReferences)) {
             foreach ($fileReferences as $fileReference) {
-                /** @var \TYPO3\CMS\Core\Resource\File * */
+                /** @var \TYPO3\CMS\Core\Resource\File $fileResource */
                 $fileResource = $fileReference->getOriginalResource();
                 $properties = $fileResource->getProperties();
                 $properties['publicUrl'] = $fileResource->getPublicUrl();
+                $properties['fileReferenceUid'] = $fileReference->getUid();
 
                 // check for image
-                if (stripos($properties['mime_type'], 'image') !== false) {
-                    $files['images'][] = $properties;
-                } else {
+                if (stripos($properties['mime_type'], 'image') === false) {
                     $files['documents'][] = $properties;
+                } else {
+                    $files['images'][] = $properties;
                 }
             }
         }
@@ -212,9 +212,9 @@ class ProjectController extends AbstractController
      */
     public function newAction()
     {
-        $this->view->assignMultiple(array(
+        $this->view->assignMultiple([
             'settings' => $this->settings,
-        ));
+        ]);
     }
 
     /**
@@ -269,11 +269,11 @@ class ProjectController extends AbstractController
         //DebuggerUtility::var_dump(count(get_object_vars($fileReferences)));
         $files = $this->getFileData($fileReferences);
 
-        $this->view->assignMultiple(array(
+        $this->view->assignMultiple([
             'project' => $project,
             'files' => $files,
             'settings' => $this->settings,
-        ));
+        ]);
     }
 
     /**
@@ -299,14 +299,9 @@ class ProjectController extends AbstractController
     public function updateAction(\EHAERER\FeUploadExample\Domain\Model\Project $project)
     {
         $projectUser = $project->getFeUserId();
-        $projectVisibleToAll = $project->getVisibleAll();
         // make sure the project belongs to the user
         if ((int)$projectUser !== (int)$GLOBALS['TSFE']->fe_user->user['uid'] && !$this->isUserAdmin()) {
             $this->redirect($this->getRedirectListAction());
-        }
-        // allow visibility field only for admin users
-        if ($projectVisibleToAll && !$this->isUserAdmin()) {
-            $project->setVisibleAll(false);
         }
 
         $oldFileReferences = $project->getFiles();
@@ -368,11 +363,11 @@ class ProjectController extends AbstractController
         foreach ($uploadedFiles as $uploadedFile) {
 
             // @var \Fab\MediaUpload\UploadedFile $uploadedFile
-            $uploadedFileData = array(
+            $uploadedFileData = [
                 'tmp_name' => $uploadedFile->getTemporaryFileNameAndPath(),
                 'name' => $uploadedFile->getFileName(),
                 'size' => $uploadedFile->getSize(),
-            );
+            ];
 
             /* @var $storage \TYPO3\CMS\Core\Resource\ResourceStorage */
             $storage = ResourceFactory::getInstance()->getStorageObject($this->settings['filestorage']);

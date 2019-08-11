@@ -3,15 +3,15 @@ if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
 
-call_user_func(function ($extKey) {
+call_user_func(static function ($extKey) {
     \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-        'EHAERER.' . $extKey, 'Feupex', array(
+        'EHAERER.' . $extKey, 'Feupex', [
         'Project' => 'list, listShared, show, new, create, edit, update, delete',
-    ),
+    ],
         // non-cacheable actions
-        array(
+        [
             'Project' => 'create, update, delete',
-        )
+        ]
     );
 
     // wizards

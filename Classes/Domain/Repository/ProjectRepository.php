@@ -27,16 +27,20 @@ namespace EHAERER\FeUploadExample\Domain\Repository;
  *  This copyright notice MUST APPEAR in all copies of the script!
  * ************************************************************* */
 
+use \TYPO3\CMS\Extbase\Persistence\Repository;
+use \TYPO3\CMS\Extbase\Persistence\QueryInterface;
+use \TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
+
 /**
  * The repository for Projects
  */
-class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class ProjectRepository extends Repository
 {
 
     // default sorting
-    protected $defaultOrderings = array(
-        'crdate' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_DESCENDING,
-    );
+    protected $defaultOrderings = [
+        'crdate' => QueryInterface::ORDER_DESCENDING,
+    ];
 
     /**
      * Find projects with searchfield and user id
@@ -45,15 +49,16 @@ class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
      * @param boolean $getAll
      * @param integer $userid
      * @param boolean $shared
-     * * @return \TYPO3\CMS\Extbase\Persistence\QueryResultInterface
+     * @return QueryResultInterface
+     * @throws
      */
     public function findWithSearchField($searchValue = '', $getAll = false, $userid = 0, $shared = false)
     {
 
         $query = $this->createQuery();
 
-        $constraints = array();
-        $searchValueConstraints = array();
+        $constraints = [];
+        $searchValueConstraints = [];
 
         if (!empty($searchValue)) {
             $searchValueLike = '%' . $searchValue . '%';

@@ -14,12 +14,24 @@
 				</th>
 				<td class="cell-2">
 					<ul>
-						<f:for each="{files.documents}" as="document">
-							<li><a href="{document.publicUrl}" target="_blank">{document.name}</a></li>
-						</f:for>
-						<f:for each="{files.images}" as="image" iteration="i">
-							<li><a href="{image.publicUrl}" target="_blank">{image.name}</a></li>
-						</f:for>
+						<f:if condition="{files.documents}">
+							<li><f:translate key="documents" />:
+								<ul>
+									<f:for each="{files.documents}" as="document">
+										<li><a href="{document.publicUrl}" target="_blank">{document.name}</a></li>
+									</f:for>
+								</ul>
+							</li>
+						</f:if>
+						<f:if condition="{files.images}">
+							<li><f:translate key="images" />:
+								<ul>
+									<f:for each="{files.images}" as="image" iteration="i">
+										<li><f:image src="{image.fileReferenceUid}" maxWidth="100" maxHeight="100" treatIdAsReference="1" />&nbsp;&nbsp;|&nbsp;&nbsp;<a href="{image.publicUrl}" target="_blank">{image.name}</a></li>
+									</f:for>
+								</ul>
+							</li>
+						</f:if>
 					</ul>
 				</td>
 			</tr>

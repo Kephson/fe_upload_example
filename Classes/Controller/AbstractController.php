@@ -55,18 +55,18 @@ class AbstractController extends ActionController
      *
      * @var array
      */
-    protected $feUser = array();
+    protected $feUser = [];
 
     /**
      * config
      *
      * @var array
      */
-    protected $config = array(
+    protected $config = [
         'languageFilePath' => 'LLL:EXT:fe_upload_example/Resources/Private/Language/locallang.xlf:',
         'extKey' => 'fe_upload_example',
-        'translations' => array(),
-    );
+        'translations' => [],
+    ];
 
     /**
      * public constructor
@@ -103,15 +103,14 @@ class AbstractController extends ActionController
     /**
      * overwrite default error messages
      *
-     * @return \TYPO3\CMS\Extbase\Error\Message
+     * @return string
      */
     protected function getErrorFlashMessage()
     {
         switch ($this->actionMethodName) {
             case 'createAction' :
             case 'updateAction' :
-                return new Message(LocalizationUtility::translate('error_message_01', $this->config['extKey']),
-                    736654822);
+                return LocalizationUtility::translate('error_message_01', $this->config['extKey']);
             default:
                 return parent::getErrorFlashMessage();
         }
@@ -129,7 +128,7 @@ class AbstractController extends ActionController
         $userGroups = explode(',', $this->feUser['usergroup']);
         $adminGroups = explode(',', $this->settings['adminusergroup']);
         foreach ($adminGroups as $k => $value) {
-            if (in_array($value, $userGroups)) {
+            if (in_array($value, $userGroups, false)) {
                 $isAdmin = true;
             }
         }
@@ -145,13 +144,13 @@ class AbstractController extends ActionController
      */
     protected function getMailSettings($setting = 'mailreceiver')
     {
-        $receiver = array();
+        $receiver = [];
         if (isset($this->settings[$setting])) {
             $allReceiver = explode('|', $this->settings[$setting]);
             if (!empty($allReceiver)) {
                 foreach ($allReceiver as $v) {
                     $r = explode('=', $v);
-                    if (isset($r[0]) && isset($r[1])) {
+                    if (isset($r[0], $r[1])) {
                         $receiver[$r[1]] = $r[0];
                     }
                 }

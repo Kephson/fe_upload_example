@@ -7,7 +7,7 @@
  * "version" and "dependencies" must not be touched!
  * ************************************************************* */
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
     'title' => 'Frontend file upload example',
     'description' => 'An example extension to show upload of files in TYPO3 frontend.',
     'category' => 'plugin',
@@ -15,17 +15,19 @@ $EM_CONF[$_EXTKEY] = array(
     'author_email' => 'mail@ephra.im',
     'state' => 'stable',
     'internal' => '',
-    'uploadfolder' => '1',
+    'uploadfolder' => true,
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '1.0.0',
-    'constraints' => array(
-        'depends' => array(
+    'version' => '1.0.1',
+    'constraints' => [
+        'depends' => [
             'typo3' => '9.5.0-9.5.99',
             'media_upload' => '*',
             'php' => '7.0.0-7.3.99',
-        ),
-        'conflicts' => array(),
-        'suggests' => array(),
-    ),
-);
+        ],
+        'conflicts' => [],
+        'suggests' => [
+            'fal_securedownload' => '2.2.0-2.99.99',
+        ],
+    ],
+];

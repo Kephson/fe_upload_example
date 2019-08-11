@@ -26,6 +26,7 @@ namespace EHAERER\FeUploadExample\Domain\Model;
  *
  *  This copyright notice MUST APPEAR in all copies of the script!
  * ************************************************************* */
+
 use TYPO3\CMS\Extbase\Persistence\ObjectStorage;
 
 /**
@@ -50,71 +51,11 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $name = '';
 
     /**
-     * city
-     *
-     * @var string
-     * @validate notEmpty
-     */
-    protected $city = '';
-
-    /**
-     * ageOfFacade
-     *
-     * @var int
-     */
-    protected $ageOfFacade = 0;
-
-    /**
-     * facadeType
-     *
-     * @var string
-     */
-    protected $facadeType = '';
-
-    /**
-     * facadeSize
-     *
-     * @var int
-     * @validate notEmpty
-     * @validate integer
-     */
-    protected $facadeSize = 0;
-
-    /**
-     * facadeColor
-     *
-     * @var string
-     */
-    protected $facadeColor = '';
-
-    /**
-     * reason
-     *
-     * @var string
-     * @validate notEmpty
-     */
-    protected $reason = '';
-
-    /**
-     * description
-     *
-     * @var string
-     */
-    protected $description = '';
-
-    /**
      * files
      *
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
      */
     protected $files = null;
-
-    /**
-     * visibleAll
-     *
-     * @var boolean
-     */
-    protected $visibleAll = false;
 
     /**
      * crdate
@@ -174,153 +115,6 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     }
 
     /**
-     * Returns the city
-     *
-     * @return string $city
-     */
-    public function getCity()
-    {
-        return $this->city;
-    }
-
-    /**
-     * Sets the city
-     *
-     * @param string $city
-     * @return void
-     */
-    public function setCity($city)
-    {
-        $this->city = $city;
-    }
-
-    /**
-     * Returns the ageOfFacade
-     *
-     * @return int $ageOfFacade
-     */
-    public function getAgeOfFacade()
-    {
-        return $this->ageOfFacade;
-    }
-
-    /**
-     * Sets the ageOfFacade
-     *
-     * @param int $ageOfFacade
-     * @return void
-     */
-    public function setAgeOfFacade($ageOfFacade)
-    {
-        $this->ageOfFacade = $ageOfFacade;
-    }
-
-    /**
-     * Returns the facadeType
-     *
-     * @return string $facadeType
-     */
-    public function getFacadeType()
-    {
-        return $this->facadeType;
-    }
-
-    /**
-     * Sets the facadeType
-     *
-     * @param string $facadeType
-     * @return void
-     */
-    public function setFacadeType($facadeType)
-    {
-        $this->facadeType = $facadeType;
-    }
-
-    /**
-     * Returns the facadeSize
-     *
-     * @return int $facadeSize
-     */
-    public function getFacadeSize()
-    {
-        return $this->facadeSize;
-    }
-
-    /**
-     * Sets the facadeSize
-     *
-     * @param int $facadeSize
-     * @return void
-     */
-    public function setFacadeSize($facadeSize)
-    {
-        $this->facadeSize = $facadeSize;
-    }
-
-    /**
-     * Returns the facadeColor
-     *
-     * @return string $facadeColor
-     */
-    public function getFacadeColor()
-    {
-        return $this->facadeColor;
-    }
-
-    /**
-     * Sets the facadeColor
-     *
-     * @param string $facadeColor
-     * @return void
-     */
-    public function setFacadeColor($facadeColor)
-    {
-        $this->facadeColor = $facadeColor;
-    }
-
-    /**
-     * Returns the reason
-     *
-     * @return string $reason
-     */
-    public function getReason()
-    {
-        return $this->reason;
-    }
-
-    /**
-     * Sets the reason
-     *
-     * @param string $reason
-     * @return void
-     */
-    public function setReason($reason)
-    {
-        $this->reason = $reason;
-    }
-
-    /**
-     * Returns the description
-     *
-     * @return string $description
-     */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * Sets the description
-     *
-     * @param string $description
-     * @return void
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-    }
-
-    /**
      * Returns the files
      *
      * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Domain\Model\FileReference> $files
@@ -341,27 +135,6 @@ class Project extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
         if (is_a($files, '\TYPO3\CMS\Extbase\Persistence\ObjectStorage')) {
             $this->files = $files;
         }
-    }
-
-    /**
-     * Returns the visibleAll
-     *
-     * @return boolean $visibleAll
-     */
-    public function getVisibleAll()
-    {
-        return $this->visibleAll;
-    }
-
-    /**
-     * Sets the visibleAll
-     *
-     * @param boolean $visibleAll
-     * @return void
-     */
-    public function setVisibleAll($visibleAll)
-    {
-        $this->visibleAll = $visibleAll;
     }
 
     /**

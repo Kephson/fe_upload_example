@@ -7,13 +7,10 @@ List view for admin and user projects
 
 <f:flashMessages />
 
-	<h2 class="t3"><f:translate key="myProjects" /></h2>
+	<h3 class="t3"><f:translate key="myProjects" /></h3>
 
 	<div class="row tableLine">
 		<div class="col-12">
-			<f:if condition="{projects -> f:count()}>5">
-				<f:render partial="Project/Search" arguments="{_all}" />
-			</f:if>
 			<f:if condition="{projects}">
 				<f:then>
 					<f:if condition="{isUserAdmin}">
