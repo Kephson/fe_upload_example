@@ -1,6 +1,7 @@
 ### 2022-03-19  Ephraim Härer  <mail@ephra.im>
 
 - new version for TYPO3 10.4
+- added extension key in composer.json
 - release of version 2.0.0
 
 ### 2019-08-16  Ephraim Härer  <mail@ephra.im>

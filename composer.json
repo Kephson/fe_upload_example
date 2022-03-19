@@ -36,6 +36,11 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "fe_upload_example"
+    }
+  }
 }
 
