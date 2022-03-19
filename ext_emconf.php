@@ -1,4 +1,4 @@
-<?php
+<?php /** @noinspection PhpUndefinedVariableInspection */
 /* * *************************************************************
  * Extension Manager/Repository config file for ext: "fe_upload_example"
  *
@@ -17,17 +17,17 @@ $EM_CONF[$_EXTKEY] = [
     'internal' => '',
     'uploadfolder' => true,
     'createDirs' => '',
-    'clearCacheOnLoad' => 0,
-    'version' => '1.0.2',
+    'clearCacheOnLoad' => false,
+    'version' => '2.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0-9.5.99',
+            'typo3' => '10.4.0-10.4.99',
             'media_upload' => '*',
-            'php' => '7.0.0-7.3.99',
+            'php' => '7.2.0-7.4.99',
         ],
         'conflicts' => [],
         'suggests' => [
-            'fal_securedownload' => '2.2.0-2.99.99',
+            'fal_securedownload' => '3.0.0-3.99.99',
         ],
     ],
 ];

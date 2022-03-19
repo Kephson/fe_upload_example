@@ -21,11 +21,11 @@
     "example"
   ],
   "require": {
-    "typo3/cms-core": "^9.5",
-    "fab/media-upload": "dev-master"
+    "typo3/cms-core": "^10.4",
+    "fab/media-upload": "^3.0"
   },
   "suggest": {
-    "beechit/fal-securedownload": "^2.2"
+    "beechit/fal-securedownload": "^3.0"
   },
   "replace": {
     "typo3-ter/fe-upload-example": "self.version"
